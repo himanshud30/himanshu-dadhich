@@ -2,106 +2,129 @@ import { Service } from '@/types';
 
 export const services: Service[] = [
   {
-    slug: 'creative-direction-brand-film',
-    title: 'Creative Direction & Brand Film',
-    tagline: 'Cinema-grade storytelling grounded in geography, culture, and human truth.',
-    description: 'We conceive, write, direct, and deliver high-impact films that anchor your brand in genuine cultural resonance. Far beyond generic corporate sizzle reels, our films feel lived-in, textured, and deeply memorable.',
-    whoFor: 'Heritage brands, luxury hospitality, craft manufacturers, and visionary founders who need their story told with emotional weight and cinematic dignity.',
-    problem: 'Most brand films look identical: slick drone shots, synthetic corporate music, and interchangeable slogans that leave no lasting memory.',
+    slug: 'the-diagnosis',
+    title: 'The Diagnosis',
+    tagline: 'A concentrated strategic review for a brand facing one important question.',
+    description: 'When founders or leadership teams hit a narrative plateau, debate positioning in circles, or struggle to explain what they do, we step in to isolate the core problem and chart an unclouded path forward.',
+    whoFor: 'Founders, leadership teams, and early-stage ventures preparing for a critical transition, launch, or repositioning.',
+    problem: 'Teams argue endlessly about design mockups and ad copy because the underlying positioning thesis was never diagnosed.',
     included: [
-      'Comprehensive cultural & brand narrative audit',
-      'Scriptwriting, treatment & visual storyboard direction',
-      'Full-spectrum on-location production (Jodhpur base or worldwide)',
-      'Editorial post-production, custom score composition & color grading',
-      'Cutdowns optimized for theatrical, keynote, web, and micro-formats'
+      'Narrative audit of existing brand touchpoints, decks & competitors',
+      'Two 90-minute founder diagnostic immersion sessions',
+      'Identification of the central story bottleneck & market white space',
+      'The Direction Document: a concise, defensible strategic roadmap'
     ],
     process: [
-      '1. Deep Immersion — Field inquiry, founder interviews, archival research',
-      '2. The Narrative Anchor — Script treatment and visual language manifest',
-      '3. Production — High-caliber cinematic execution with minimal footprint',
-      '4. Post & Color — Bespoke edit, sound design, original scoring',
-      '5. Distribution Architecture — Formats and rollout cadence'
+      '1. Context intake & collateral review',
+      '2. Diagnostic inquiry sessions with leadership',
+      '3. Synthesis & strategic tension resolution',
+      '4. Delivery and walkthrough of the Direction Document'
     ],
-    timeline: '6 to 10 weeks',
-    expectedOutcome: 'A flagship narrative piece that stands the test of time, elevates brand prestige, and anchors multi-year marketing campaigns.',
-    startingPrice: '₹4,50,000 / $6,000 USD',
-    icon: 'film'
-  },
-  {
-    slug: 'content-ecosystem-strategy',
-    title: 'Content Ecosystem Strategy',
-    tagline: 'Designing self-reinforcing narrative engines, not disposable social noise.',
-    description: 'A complete architectural blueprint for your brand’s content universe. We build systems where podcasts feed long-form films, which yield editorial essays, which fuel micro-insights—compounding audience trust rather than exhausting creative teams.',
-    whoFor: 'Growth-stage companies, modern consumer brands, thought leaders, and institutions seeking organic brand equity.',
-    problem: 'Brands burn out running on the social media treadmill—producing dozens of disconnected posts daily that accumulate zero lasting value.',
-    included: [
-      'Core thematic pillar definition and audience mapping',
-      'Pillar-to-satellite content repurposing matrices',
-      'Creator & production team operating playbook',
-      'Tone of voice guide, visual styling guides, and prompt libraries',
-      'Monthly editorial calendar & distribution cadence blueprint'
-    ],
-    process: [
-      '1. Audit & Gap Analysis — Cataloging past output and resonant touchpoints',
-      '2. Architecture Design — Mapping core media anchors and distribution spokes',
-      '3. System Blueprinting — Production SOPs, tooling, and workflow automation',
-      '4. Pilot Sprint — 30-day production run to calibrate voice and efficiency',
-      '5. Handover & Scaling — Training internal champions or studio retainers'
-    ],
-    timeline: '4 to 6 weeks',
-    expectedOutcome: 'A sustainable, high-leverage production pipeline that generates compound audience growth while cutting creative churn in half.',
-    startingPrice: '₹3,00,000 / $4,000 USD',
-    icon: 'layers'
-  },
-  {
-    slug: 'creative-strategy-sprint',
-    title: 'Creative Strategy Sprint',
-    tagline: 'A rigorous 2-week strategic intervention to unlock your brand’s defining point of view.',
-    description: 'High-intensity strategic alignment designed to answer the foundational questions: What do we stand for? What cultural conversation do we belong in? How do we communicate with undeniable clarity?',
-    whoFor: 'Founders preparing for launch, scale, brand repositioning, or major fundraising rounds.',
-    problem: 'Teams argue endlessly about visual identities and marketing copy because the fundamental strategic positioning was never crystallized.',
-    included: [
-      '3 deep-dive collaborative strategic workshops',
-      'Cultural positioning landscape & competitor white-space analysis',
-      'Brand manifesto & core brand thesis documentation',
-      'Strategic messaging matrix and verbal guidelines',
-      'Key launch concept blueprints'
-    ],
-    process: [
-      'Day 1-3: Strategic immersion and interrogation of brand truths',
-      'Day 4-7: Cultural synthesis and hypothesis development',
-      'Day 8-10: Collaborative workshop: Pressure-testing territories',
-      'Day 11-14: Final synthesis deliverable and leadership presentation'
-    ],
-    timeline: '2 weeks',
-    expectedOutcome: 'Total clarity across leadership on brand narrative, positioning, and a ready-to-execute creative manifesto.',
-    startingPrice: '₹2,00,000 / $2,500 USD',
+    timeline: '1–2 weeks',
+    expectedOutcome: 'A concise, rigorous diagnosis and direction document that eliminates ambiguity across leadership.',
+    startingPrice: '₹1,50,000 / $2,000 USD',
     icon: 'compass'
   },
   {
-    slug: 'original-ip-partnership',
-    title: 'Original IP & Docu-Series Co-Production',
-    tagline: 'Collaborative development of episodic cultural properties and original series.',
-    description: 'We partner with forward-thinking patrons, brands, and platforms to co-create original documentary series, cultural archives, and experimental film projects rooted in Indian ethos and universal human conditions.',
-    whoFor: 'Cultural institutions, family offices, visionary brands seeking brand-funded entertainment, and streaming platforms.',
-    problem: 'Sponsorship often feels forced, transactional, and cheapening for both the creator and the sponsor.',
+    slug: 'the-story-system',
+    title: 'The Story System',
+    tagline: 'Positioning, narrative territories, messaging and repeatable content formats.',
+    description: 'Transforming an isolated product or brand into a coherent narrative universe. We define your central positioning, articulate the cultural conversation you belong to, and create repeatable storytelling formats that your team can execute autonomously.',
+    whoFor: 'Brands with fragmented communication, inconsistent messaging, or products that feel difficult to explain.',
+    problem: 'Marketing teams waste hundreds of hours reinventing copy for every post because there is no governing narrative system.',
     included: [
-      'IP conceptualization, character research, and pitch decks',
-      'Full production leadership and direction',
-      'Festival submission & global distribution strategy',
-      'Exclusive brand integration that honors creative integrity',
-      'Physical exhibition and premiere screening curation'
+      'Foundational brand positioning thesis & verbal guidelines',
+      '3–4 distinct narrative territories for ongoing storytelling',
+      'Messaging matrix for founders, keynotes, web, and social',
+      'Repeatable content formats and template architecture',
+      'Studio handover workshop with your creative team'
     ],
     process: [
-      '1. Subject Discovery & Development — Field reconnaissance and thesis framing',
-      '2. Funding & Partnership Structuring — Aligning vision, rights, and distribution',
-      '3. Production Journeys — Immersive documentary filmmaking across India',
-      '4. Assembly & Sound — World-class editorial, color, and musical score',
-      '5. Global Release — Festival circuit, digital premiere, community screenings'
+      '1. Deep immersion and customer truth extraction',
+      '2. Developing the central story thesis',
+      '3. Mapping narrative territories and content formats',
+      '4. Testing formats with live pilot creative',
+      '5. Handover of the usable brand-story system'
     ],
-    timeline: '3 to 9 months',
-    expectedOutcome: 'Enduring cultural intellectual property that generates generational goodwill, international accolades, and media resonance.',
-    startingPrice: 'Custom Quote / Partnership Basis',
+    timeline: '4–6 weeks',
+    expectedOutcome: 'A complete, usable brand-story system that turns scattered communication into consistent, compounding trust.',
+    startingPrice: '₹3,50,000 / $4,500 USD',
+    icon: 'layers'
+  },
+  {
+    slug: 'the-content-os',
+    title: 'The Content OS',
+    tagline: 'Research, ideation, production, approval and learning systems.',
+    description: 'A complete operational blueprint for modern content production. We build systems where research feeds long-form pieces, which yield editorial essays, which power short-form insights—allowing teams to produce regularly while compounding audience devotion.',
+    whoFor: 'Teams that are producing content regularly but learning slowly, burning out, or trapped on the social media treadmill.',
+    problem: 'High volume, zero compound equity: brands exhaust themselves publishing disposable posts that leave no lasting memory.',
+    included: [
+      'Research & inquiry capture pipeline (turning field insights into ideas)',
+      'Production workflows, editorial calendar & review cadences',
+      'Distribution and repurposing architecture across platforms',
+      'AI-assisted research, prompt libraries & creative guidelines',
+      'Performance feedback loops (measuring saves, shares & retention, not empty impressions)'
+    ],
+    process: [
+      '1. Operational audit of past creative churn and bottleneck identification',
+      '2. Architecture design: mapping the research-to-distribution pipeline',
+      '3. Workflow tooling and operating playbook documentation',
+      '4. Pilot production sprint (first 10 pieces run through the OS)',
+      '5. Training internal team champions'
+    ],
+    timeline: '6–8 weeks',
+    expectedOutcome: 'A repeatable, high-leverage content operation that cuts production chaos in half while doubling narrative retention.',
+    startingPrice: '₹4,50,000 / $5,500 USD',
     icon: 'sparkles'
+  },
+  {
+    slug: 'the-creative-partnership',
+    title: 'The Creative Partnership',
+    tagline: 'Ongoing senior strategy, concepts, scripts and creative direction.',
+    description: 'An embedded strategic engagement where Himanshu serves as your dedicated outside Creative Director. We steer big brand moments, write high-stakes keynote narratives, conceive flagship film concepts, and guard the brand’s creative soul.',
+    whoFor: 'Growing brands, venture-backed companies, and institutions requiring senior narrative leadership without hiring a bloated agency.',
+    problem: 'Full-time senior creative executives are slow and expensive to hire, while traditional agencies delegate your work to junior account managers.',
+    included: [
+      'Ongoing creative direction and brand narrative governance',
+      'Direct participation in monthly/quarterly strategic planning',
+      'Scriptwriting and visual treatments for major brand films & launches',
+      'Founder speechwriting, op-eds, and keynote storytelling',
+      'Vetting external production houses and creative vendors'
+    ],
+    process: [
+      'Month 1: Alignment sprint & priority roadmap calibration',
+      'Ongoing: Bi-weekly strategic reviews & live creative execution sprints',
+      'Quarterly: Narrative health review and positioning refresh'
+    ],
+    timeline: '3 months minimum',
+    expectedOutcome: 'Consistent senior creative leadership that ensures every piece of output elevates long-term enterprise prestige.',
+    startingPrice: '₹2,50,000 / month ($3,000 / mo)',
+    icon: 'compass'
+  },
+  {
+    slug: 'original-series',
+    title: 'Original Series',
+    tagline: 'A documentary, editorial or entertainment-led series created with a brand.',
+    description: 'We co-create original episodic documentary properties that treat your domain as living culture rather than an advertisement. Far beyond corporate sponsored content, our series are intellectual properties that audiences actively choose to watch and preserve.',
+    whoFor: 'Heritage brands, forward-thinking tech companies, and visionary founders with a genuine human or cultural story to tell.',
+    problem: 'Traditional brand sponsorships feel transactional and cheapening for both the creator and the sponsor.',
+    included: [
+      'Original series concept, narrative treatment & episode arc design',
+      'On-location production leadership (cinematography, sound design, directing)',
+      'Editorial post-production, custom scoring & archival grading',
+      'Multi-format cutdowns for social distribution, theatrical screenings, or digital hubs',
+      'Long-term IP rights and distribution architecture'
+    ],
+    process: [
+      '1. Subject discovery & ethnographic field research',
+      '2. Treatment & episode structure alignment',
+      '3. Production expedition with minimal-footprint cinema crew',
+      '4. Assembly, master sound mix & archival color grade',
+      '5. Premiere rollout & community screening coordination'
+    ],
+    timeline: 'Custom (typically 8–16 weeks)',
+    expectedOutcome: 'An enduring original branded property that builds generational audience goodwill and media resonance.',
+    startingPrice: 'Custom Quote / Partnership Basis',
+    icon: 'film'
   }
 ];

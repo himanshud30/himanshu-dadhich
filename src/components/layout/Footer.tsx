@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <span className="w-8 h-[2px] bg-sandstone" />
               <span className="text-[10px] tracking-[0.2em] font-semibold text-sandstone uppercase">
-                Foundational Thesis
+                14 / FOOTPRINT &middot; JODHPUR, INDIA — WORKING WORLDWIDE
               </span>
             </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
             </h2>
 
             <p className="font-serif italic text-base sm:text-lg text-cream/70 max-w-xl leading-relaxed">
-              Himanshu Dadhich is a creative strategist, filmmaker, storyteller and founder building TLR—a globally relevant creative strategy and design studio from Jodhpur, Rajasthan.
+              Himanshu Dadhich is a creative strategist, filmmaker, storyteller and founder building TLR—a globally distributed creative strategy and cinema studio from Jodhpur, Rajasthan.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold tracking-label uppercase">
@@ -56,7 +56,7 @@ export default function Footer() {
               The Dispatch Archive
             </h3>
             <p className="text-xs sm:text-sm text-cream/70 leading-relaxed mb-6">
-              Critical inquiries on creative strategy, cinema, vernacular architecture, and cultural preservation. Sent twice monthly from the studio.
+              Twice a month, an unsparing essay on creative strategy, cinema, and building a globally distributed studio from Jodhpur.
             </p>
             <NewsletterForm light={true} />
           </div>
@@ -81,11 +81,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="hover:text-sandstone transition-colors">
-                  Services & Packages
+                  Signature Engagements
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-sandstone transition-colors">
+                <Link href="/projects/sundarkand" className="hover:text-sandstone transition-colors">
                   Sundarkand Project
                 </Link>
               </li>
@@ -130,6 +130,7 @@ export default function Footer() {
               TLR Studio Base
             </h4>
             <div className="space-y-2.5 text-cream/70">
+              <p className="font-semibold text-cream">JODHPUR, INDIA — WORKING WORLDWIDE</p>
               <p>Old City, Navchokiya</p>
               <p>Jodhpur 342001, Rajasthan</p>
               <p>India (IST, UTC+5:30)</p>
@@ -146,12 +147,12 @@ export default function Footer() {
             <ul className="space-y-2.5 text-cream/70">
               <li>
                 <Link href="/collaborate" className="hover:text-sandstone transition-colors flex items-center gap-1.5">
-                  Brand Collaboration Form <ArrowUpRight className="w-3 h-3" />
+                  Share Your Project <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>
               <li>
                 <Link href="/conversation" className="hover:text-sandstone transition-colors flex items-center gap-1.5">
-                  Open Studio Message <ArrowUpRight className="w-3 h-3" />
+                  Ask Himanshu a Question <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>
               <li>
@@ -188,31 +189,36 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar (Yūgen Style) */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-cream/50">
-          <div className="flex items-center gap-4">
+        {/* Bottom Bar with Requested Location-Status Indicator */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-cream/60">
+          <div className="flex flex-wrap items-center gap-4">
             <p>
               &copy; {new Date().getFullYear()} Himanshu Dadhich &middot; TLR Creative Strategy Studio.
             </p>
             <span className="hidden sm:inline">&middot;</span>
-            <span className="font-mono text-sandstone text-[10px] hidden sm:inline">
-              26.2389° N, 73.0243° E
+            <span className="font-mono text-sandstone text-[10px]">
+              JODHPUR, INDIA — WORKING WORLDWIDE
             </span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-cream/80">
+          {/* Location-Status Indicator as specified */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-mono text-[10px] tracking-wider uppercase">
+            <span className="text-sandstone">JODHPUR / BASE</span>
+            <span className="text-cream/40">&middot;</span>
+            <span className="text-cream/80">WORLD / FIELD</span>
+            <span className="text-cream/40">&middot;</span>
+            <span className="flex items-center gap-1.5 text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Studio Online &middot; Jodhpur (IST)</span>
+              CURRENTLY / ONLINE
             </span>
 
-            {/* Yūgen Back To Top Button */}
+            {/* Back to Top */}
             <a
               href="#"
-              className="inline-flex items-center gap-2 uppercase tracking-wider text-[10px] text-cream/70 hover:text-sandstone transition-colors group"
+              className="inline-flex items-center gap-2 uppercase tracking-wider text-[10px] text-cream/70 hover:text-sandstone transition-colors group ml-2"
             >
-              <span>Back to Top</span>
-              <span className="w-6 h-6 rounded-full bg-cream/10 flex items-center justify-center transition-transform group-hover:-translate-y-1">
+              <span>Top</span>
+              <span className="w-5 h-5 rounded-full bg-cream/10 flex items-center justify-center transition-transform group-hover:-translate-y-0.5">
                 &uarr;
               </span>
             </a>

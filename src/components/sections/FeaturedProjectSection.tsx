@@ -1,14 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Heart, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Heart, Sparkles, Music, Film, Compass } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 export default function FeaturedProjectSection() {
   const sundarkand = projects[0];
 
   return (
-    <section className="py-24 md:py-32 border-b border-dark/15 relative overflow-hidden bg-sandstone-light/30">
+    <section id="sundarkand" className="py-20 md:py-28 border-b border-dark/15 relative overflow-hidden bg-cream-dark/30">
       <div className="max-w-site mx-auto px-6 lg:px-12">
+        {/* Section Header */}
+        <div className="flex items-center justify-between border-b border-dark/15 pb-6 mb-12">
+          <div className="flex items-center gap-3">
+            <span className="w-8 h-[2px] bg-sandstone" />
+            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-sandstone">
+              09 / ORIGINAL PROJECT &middot; SACRED UNDERTAKING
+            </span>
+          </div>
+
+          <span className="text-xs uppercase font-mono tracking-wider text-muted hidden sm:inline">
+            PATRON-FUNDED &middot; INDEPENDENT CULTURE
+          </span>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Visual Left */}
           <div className="lg:col-span-6 relative">
@@ -18,13 +32,13 @@ export default function FeaturedProjectSection() {
                 alt={sundarkand.title}
                 className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/85 via-transparent to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 text-cream">
                 <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-sandstone block mb-1">
-                  Independent Cultural Epic
+                  Cultural Legacy Project
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-display">
+                <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-display text-cream">
                   {sundarkand.title}
                 </h3>
               </div>
@@ -34,9 +48,9 @@ export default function FeaturedProjectSection() {
             <div className="absolute -bottom-6 -right-4 sm:right-6 bg-dark text-cream p-5 rounded-[2px] border border-sandstone/40 shadow-xl max-w-xs">
               <div className="flex items-center justify-between gap-4 mb-2">
                 <span className="text-[10px] uppercase tracking-wider text-sandstone font-semibold">
-                  Production Milestone
+                  Progress Milestone
                 </span>
-                <span className="text-xs font-bold text-cream">
+                <span className="text-xs font-bold text-cream font-mono">
                   {sundarkand.currentProgress}% Complete
                 </span>
               </div>
@@ -46,40 +60,52 @@ export default function FeaturedProjectSection() {
                   style={{ width: `${sundarkand.currentProgress}%` }}
                 />
               </div>
-              <p className="text-[10px] text-cream/70 mt-2">
-                Scoring & principal 35mm photography completed. Dolby Atmos mix in progress.
+              <p className="text-[10px] text-cream/70 mt-2 font-serif italic">
+                Acoustic scoring recorded. AI visual generation & master grading in progress.
               </p>
             </div>
           </div>
 
           {/* Narrative Right */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-[2px] bg-sandstone" />
-              <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-sandstone">
-                Flagship Original Production
-              </span>
-            </div>
-
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-display uppercase text-dark leading-[0.95]">
               Sundarkand:<br />
               <span className="text-sandstone">The Inner Odyssey</span>
             </h2>
 
-            <p className="font-serif italic text-lg sm:text-xl text-dark/80 leading-snug">
-              “A contemporary cinematic exploration of inner courage, devotion, and psychological triumph.”
+            <p className="font-serif italic text-lg sm:text-xl text-dark/85 leading-snug">
+              “A 2.5-hour cinematic visual-musical opus interpreting the sacred poetry of Goswami Tulsidas through contemporary AI film pipelines and acoustic Indian orchestration.”
             </p>
 
-            <p className="text-sm sm:text-base text-dark/75 leading-relaxed">
-              Interpreting the sacred poetic text of the Sundarkand through visual poetry, experimental soundscapes, and raw Rajasthani soil. Built with community backing, transparent budgeting, and unwavering artistic independence.
+            <p className="text-xs sm:text-sm text-dark/75 leading-relaxed font-sans">
+              This is not a commercial client project. It is our studio’s self-initiated cultural dedication—preserving ancient philosophical poetry while pioneering ethical artificial intelligence cinema. Backed transparently by a global patron circle.
             </p>
+
+            {/* 3 Process Highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+              <div className="p-3 bg-cream border border-dark/10 rounded-[2px]">
+                <span className="font-bold text-dark uppercase text-[10px] tracking-wider block mb-1 flex items-center gap-1.5">
+                  <Music className="w-3.5 h-3.5 text-sandstone" />
+                  Acoustic Scoring
+                </span>
+                <span className="text-dark/70">100+ verses scored with classical sarangi, flute, and mridangam.</span>
+              </div>
+
+              <div className="p-3 bg-cream border border-dark/10 rounded-[2px]">
+                <span className="font-bold text-dark uppercase text-[10px] tracking-wider block mb-1 flex items-center gap-1.5">
+                  <Film className="w-3.5 h-3.5 text-sandstone" />
+                  Synthetic Cinema
+                </span>
+                <span className="text-dark/70">Custom latent diffusion pipelines maintaining strict mythological fidelity.</span>
+              </div>
+            </div>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href="/projects/sundarkand"
                 className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2"
               >
-                <span>Explore The Odyssey</span>
+                <span>Explore Project & Progress</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
