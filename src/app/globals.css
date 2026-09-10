@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Styles ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+    background-color: #F5F0E7;
+  }
+
+  ::selection {
+    background-color: rgba(199, 147, 104, 0.3);
+    color: #111111;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C79368;
+    border-radius: 2px;
+  }
+}
+
+/* ─── Component Styles ─── */
+@layer components {
+  /* Grain Overlay */
+  .grain::after {
+    content: '';
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.032;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    position: fixed;
+    inset: 0;
+  }
+
+  /* Jali Background Pattern */
+  .jali-bg {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 31px,
+      rgba(17, 17, 17, 0.04) 31px 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 31px,
+      rgba(17, 17, 17, 0.04) 31px 32px
+    );
+  }
+
+  /* Section Rules */
+  .rule-top {
+    border-top: 1px solid rgba(17, 17, 17, 0.15);
+  }
+  .rule-bottom {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  }
+
+  /* Arch Line Decorator */
+  .arch-line::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #C79368;
+    margin-bottom: 20px;
+  }
+
+  /* Project Numbers */
+  .proj-num {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgba(17, 17, 17, 0.07);
+    user-select: none;
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  /* Card Reveal */
+  .card-reveal {
+    overflow: hidden;
+  }
+  .card-reveal img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .card-reveal:hover img {
+    transform: scale(1.04);
+  }
+
+  /* Status Chip */
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 2px;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-site mx-auto px-6 lg:px-12;
+  }
+
+  /* Page Entrance Animation */
+  .page-enter {
+    animation: pageIn 0.35s forwards;
+  }
+
+  @keyframes pageIn {
+    0% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card-reveal img {
+    transition: none !important;
+  }
+
+  .card-reveal:hover img {
+    transform: none !important;
+  }
+}
