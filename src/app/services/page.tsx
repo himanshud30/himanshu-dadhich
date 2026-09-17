@@ -15,10 +15,10 @@ export default function ServicesPage() {
     <div className="py-16 md:py-24">
       <div className="max-w-site mx-auto px-6 lg:px-12">
         <SectionHeader
-          eyebrow="Commercial Engagements & Advisory"
-          title="Services & Strategic Packages"
-          subtitle="Fixed-scope creative interventions designed to compound brand authority"
-          description="We partner with heritage institutions, ambitious founders, and visionary enterprises seeking cinematic clarity and strategic differentiation."
+          eyebrow="Services & Creative Capabilities"
+          title="Services & Packages"
+          subtitle="Structured creative partnerships designed for brands and founders"
+          description="From positioning and content systems to high-craft brand films — clear scopes, predictable timelines, and direct collaboration."
         />
 
         {/* Detailed Service Sections */}
@@ -37,7 +37,7 @@ export default function ServicesPage() {
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-muted">
-                      Package Architecture
+                      Structured Package
                     </span>
                   </div>
                   <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-display text-dark">
@@ -54,17 +54,17 @@ export default function ServicesPage() {
                       <Clock className="w-3.5 h-3.5 text-sandstone" />
                       <span>Timeline: {service.timeline}</span>
                     </div>
-                    <div className="text-sm font-bold text-dark mt-1">
-                      {service.startingPrice}
+                    <div className="text-xs font-mono font-bold text-sandstone uppercase tracking-wider mt-1">
+                      Custom Scope
                     </div>
                   </div>
 
                   <Link
-                    href={`/collaborate?service=${encodeURIComponent(service.title)}`}
-                    className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2 shrink-0"
+                    href={`/conversation?service=${encodeURIComponent(service.title)}`}
+                    className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2 shrink-0 group"
                   >
-                    <span>Engage Studio</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <span>Book a Call</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </div>
               </div>
@@ -136,42 +136,42 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Advisory FAQ Section */}
+        {/* FAQ Section */}
         <div className="mt-24 pt-16 border-t border-dark/15 max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-sandstone">
-              Studio Operating Principles
+              Working Together
             </span>
             <h3 className="font-display text-3xl sm:text-4xl uppercase tracking-display text-dark mt-2">
-              Frequently Addressed Inquiries
+              Frequently Asked Questions
             </h3>
           </div>
 
           <div className="space-y-6">
             <div className="p-6 bg-cream-dark/30 border border-dark/15 rounded-[2px]">
               <h4 className="font-bold text-sm text-dark mb-2">
-                Can TLR produce on location outside of Jodhpur and India?
+                Do you travel for shoots and brand workshops?
               </h4>
               <p className="text-xs sm:text-sm text-dark/75 leading-relaxed">
-                Yes. While our headquarters, editorial suites, and creative research base are in Jodhpur, our directorial team routinely travels internationally for principal photography, brand immersion, and keynote presentations.
+                Yes. While I am based out of Jodhpur, I regularly travel across India for on-location filming, founder interviews, and strategy workshops. Pre-production and post-production are managed with a lean, trusted team.
               </p>
             </div>
 
             <div className="p-6 bg-cream-dark/30 border border-dark/15 rounded-[2px]">
               <h4 className="font-bold text-sm text-dark mb-2">
-                How do retainers vs. fixed-fee sprints work?
+                How do project sprints vs retainers work?
               </h4>
               <p className="text-xs sm:text-sm text-dark/75 leading-relaxed">
-                All engagements begin as defined, fixed-fee sprints or project deliveries. Once mutual strategic alignment is proven, we offer selective ongoing narrative advisory retainers to a maximum of four clients per calendar year.
+                Most collaborations start with a defined sprint — like The Diagnosis or The Story System — to establish a clear foundation. For teams needing continuous creative direction or episodic series, we offer monthly advisory partnerships.
               </p>
             </div>
 
             <div className="p-6 bg-cream-dark/30 border border-dark/15 rounded-[2px]">
               <h4 className="font-bold text-sm text-dark mb-2">
-                What is your confidentiality policy for unannounced brands?
+                How do we get started?
               </h4>
               <p className="text-xs sm:text-sm text-dark/75 leading-relaxed">
-                We sign rigorous bilateral non-disclosure agreements prior to all strategic sprints. Proprietary intellectual property, unreleased film treatments, and brand strategy matrices remain completely protected.
+                Book a brief intro call. We’ll discuss what you are building, the current bottleneck in your content or brand, and whether one of these packages is the right fit.
               </p>
             </div>
           </div>

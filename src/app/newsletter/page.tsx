@@ -5,8 +5,8 @@ import NewsletterForm from '@/components/common/NewsletterForm';
 import { newsletterIssues, newsletterTerritories } from '@/data/newsletter';
 
 export const metadata: Metadata = {
-  title: 'Field Dispatches & Newsletter Archive',
-  description: 'Bi-weekly editorial dispatches on brand mythology, cinema, and cultural strategy from Jodhpur.',
+  title: 'Indian Content Industry Reports & Dispatches · Himanshu Dadhich',
+  description: 'Deep dives analyzing how the Indian content industry is evolving across brands, companies, creators, and culture.',
 };
 
 export default function NewsletterPage() {
@@ -14,23 +14,23 @@ export default function NewsletterPage() {
     <div className="py-16 md:py-24">
       <div className="max-w-site mx-auto px-6 lg:px-12">
         <SectionHeader
-          eyebrow="Editorial Canon & Writing"
-          title="Field Dispatches"
-          subtitle="A fortnightly reflection on creative leverage, cinema, and cultural architecture"
-          description="Read by founders, creative directors, filmmakers, and investors across 14 countries. Unfiltered field notes and strategic frameworks."
+          eyebrow="Industry Analysis & Dispatches"
+          title="Indian Content Industry Reports"
+          subtitle="Bi-weekly breakdowns across brands, companies, creators, and culture"
+          description="How Indian brands, tech startups, and independent creators are building attention, distribution, and enduring stories."
         />
 
         {/* Subscribe Banner */}
         <div className="p-8 md:p-12 bg-dark text-cream rounded-[2px] border border-cream/15 my-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 space-y-4">
             <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-sandstone">
-              Join The Circle
+              The Dispatch
             </span>
             <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-display">
-              Delivered Direct From Jodhpur
+              Read the Fortnightly Analysis
             </h2>
             <p className="text-xs sm:text-sm text-cream/75 leading-relaxed">
-              No sponsored fluff, no growth hacks. Only high-density strategic essays, production retrospectives, and cultural dispatches.
+              No generic tips or recycled tweets. Practical breakdowns on what is actually working in the Indian content and brand ecosystem.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function NewsletterPage() {
         {/* Core Territories */}
         <div className="mb-16">
           <span className="text-xs uppercase font-semibold tracking-[0.2em] text-sandstone block mb-4">
-            Thematic Territories Explored:
+            Verticals Analyzed:
           </span>
           <div className="flex flex-wrap gap-2">
             {newsletterTerritories.map((t, idx) => (

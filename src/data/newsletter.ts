@@ -2,43 +2,43 @@ import { NewsletterIssue } from '@/types';
 
 export const newsletterIssues: NewsletterIssue[] = [
   {
-    slug: 'issue-42-the-architecture-of-stillness',
-    number: 42,
-    title: 'The Architecture of Stillness: Why Modern Brands Need Sanctuaries',
-    excerpt: 'Examining why physical and digital spaces that refuse to scream are outperforming hyper-optimized attention traps in long-term enterprise retention.',
-    publishedAt: '2026-08-18',
-    territories: ['Creative Strategy', 'Spatial Philosophy', 'Cultural Economics']
+    slug: 'issue-12-indian-brands-ditching-traditional-ad-agencies',
+    number: 12,
+    title: 'The Indian Brand Vertical: Why D2C Founders Are Moving from Agencies to Creator Studios',
+    excerpt: 'An analysis of how modern Indian consumer brands are trading bloated agency retainers for lean, creator-led storytelling studios with higher trust and retention.',
+    publishedAt: '2026-08-28',
+    territories: ['Brand Vertical', 'D2C Storytelling', 'Agency Shifts']
   },
   {
-    slug: 'issue-41-the-death-of-the-interchangeable-agency',
-    number: 41,
-    title: 'The Death of the Interchangeable Agency: Rooted Studios Win',
-    excerpt: 'Why positioning your studio in an ancestral heritage city like Jodhpur gives you an insurmountable moat against cookie-cutter agency conglomerates.',
-    publishedAt: '2026-07-22',
-    territories: ['Studio Culture', 'Geography', 'Point of View']
+    slug: 'issue-11-enterprise-content-in-india-founder-led-media',
+    number: 11,
+    title: 'The Company & Enterprise Vertical: How Indian Tech Is Building Founder-Led Media Engines',
+    excerpt: 'Boring corporate press releases are dead. How Indian B2B and fintech companies are turning founders and engineering leaders into recurring media channels.',
+    publishedAt: '2026-08-10',
+    territories: ['Company Vertical', 'Founder Media', 'B2B Storytelling']
   },
   {
-    slug: 'issue-40-sacred-vernacular-vs-corporate-folklore',
-    number: 40,
-    title: 'Sacred Vernacular vs. Corporate Folklore',
-    excerpt: 'How brands can engage with living indigenous mythologies and folklore without condescending to aesthetic tokenism or superficial tourism.',
-    publishedAt: '2026-06-30',
-    territories: ['Mythology', 'Cinema', 'Brand Storytelling']
+    slug: 'issue-10-tier-2-tier-3-creator-economy-production-upgrade',
+    number: 10,
+    title: 'The Creator Vertical: The 7-Year Maturation of Indian Regional Content Creators',
+    excerpt: 'From cheap smartphone sketches to cinema-grade regional narratives. Why tier-2 and tier-3 Indian creators are setting new benchmarks in retention and loyalty.',
+    publishedAt: '2026-07-24',
+    territories: ['Creator Vertical', 'Regional Ecosystems', 'Production Craft']
   },
   {
-    slug: 'issue-39-the-metabolism-of-film',
-    number: 39,
-    title: 'The Metabolism of Film: Directing at Human Speed',
-    excerpt: 'Practical reflections from 45 continuous days shooting 35mm film across the western borders of Rajasthan with non-professional actors.',
-    publishedAt: '2026-05-15',
-    territories: ['Filmmaking', 'Craft', 'Field Notes']
+    slug: 'issue-09-cultural-vertical-mythology-and-documentary-formats',
+    number: 9,
+    title: 'The Cultural & Media Vertical: Packaging Indian Heritage for Modern Attention Spans',
+    excerpt: 'Examining the surge in independent Indian cultural documentaries and mythological explorations — moving beyond superficial tourism into cinematic depth.',
+    publishedAt: '2026-07-02',
+    territories: ['Cultural Vertical', 'Documentary', 'Heritage Cinema']
   }
 ];
 
 export const newsletterTerritories = [
-  'Creative Strategy',
-  'Filmmaking & Craft',
-  'Culture & Architecture',
-  'Studio Building',
-  'Metaphysics & Technology'
+  'Brand Vertical & D2C',
+  'Company & Founder Media',
+  'Creator Economy & Economics',
+  'Production & Visual Craft',
+  'Cultural & Media Verticals'
 ];

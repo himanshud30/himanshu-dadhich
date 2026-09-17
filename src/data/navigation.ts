@@ -3,9 +3,9 @@ import { NavLink } from '@/types';
 export const mainNavLinks: NavLink[] = [
   { label: 'Work', href: '/work' },
   { label: 'Services', href: '/services' },
-  { label: 'Creative Lab', href: '/#creative-lab' },
+  { label: 'Creative Lab', href: '/the-creative-lab' },
   { label: 'Sundarkand', href: '/projects/sundarkand' },
-  { label: 'Newsletter & Notes', href: '/newsletter' },
+  { label: 'Newsletter', href: '/newsletter' },
   { label: 'About', href: '/about' },
 ];
 
@@ -17,14 +17,14 @@ export const footerLinks = {
   explore: [
     { label: 'Work', href: '/work' },
     { label: 'Services', href: '/services' },
-    { label: 'Creative Lab', href: '/#creative-lab' },
+    { label: 'Creative Lab', href: '/the-creative-lab' },
     { label: 'Sundarkand', href: '/projects/sundarkand' },
-    { label: 'Newsletter & Notes', href: '/newsletter' },
+    { label: 'Newsletter', href: '/newsletter' },
   ],
   connect: [
     { label: 'About Himanshu', href: '/about' },
     { label: 'Book a Call', href: '/conversation' },
-    { label: 'Collaborations', href: '/collaborations' },
+    { label: 'Collaborations', href: '/collaborate' },
     { label: 'Supporters', href: '/supporters' },
   ],
   social: [

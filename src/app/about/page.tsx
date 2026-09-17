@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[2px] bg-sandstone" />
             <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-sandstone">
-              Biography & Cultural Positioning
+              Creator & Filmmaker
             </span>
           </div>
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="font-serif italic text-2xl sm:text-3xl text-dark/80 mt-4">
-            “Jodhpur is the base. The world is the field. The work is the bridge.”
+            “7 years in the creative industry. Based in Jodhpur, creating for brands and audiences across India.”
           </p>
         </div>
 
@@ -38,19 +38,19 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden border border-dark/20 shadow-md">
               <img
                 src="/images/himanshu/himanshu-standing.jpg"
-                alt="Himanshu Dadhich standing in studio"
+                alt="Himanshu Dadhich"
                 className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-500"
               />
               <div className="absolute bottom-4 left-4 right-4 bg-dark/85 backdrop-blur-md p-4 text-cream rounded-[2px] border border-cream/10">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sandstone">
                     <MapPin className="w-3.5 h-3.5" />
-                    <span>Navchokiya, Old Jodhpur</span>
+                    <span>Jodhpur, Rajasthan</span>
                   </div>
                   <img src="/logo-cropped.png" alt="TLR Logo" className="h-5 invert opacity-80" />
                 </div>
                 <p className="text-[11px] text-cream/70 mt-1">
-                  Creative Director, Strategist & Writer &middot; TLR Studio
+                  Content Creator & Filmmaker &middot; Founder, TLR & The Creative Lab
                 </p>
               </div>
             </div>
@@ -58,21 +58,21 @@ export default function AboutPage() {
             {/* Quick Principles */}
             <div className="bg-cream-dark/50 p-6 rounded-[2px] border border-dark/15 space-y-4">
               <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-sandstone block">
-                Foundational Tenets
+                Core Beliefs
               </span>
 
               <div className="space-y-3 text-xs text-dark/80">
                 <div className="flex items-start gap-2.5">
                   <span className="font-bold text-dark font-display text-base">01</span>
-                  <span><strong>Locality as Superpower:</strong> Global relevance begins with radical geographic specificity, not rootless mimicry.</span>
+                  <span><strong>Craft Over Clutter:</strong> One piece of work people remember beats fifty pieces of disposable feed filler.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="font-bold text-dark font-display text-base">02</span>
-                  <span><strong>Slow Craft, High Leverage:</strong> Narrative depth compounds over years; superficial social noise evaporates in minutes.</span>
+                  <span><strong>Grounded Roots:</strong> Hailing from Jodhpur gives me a grounded, honest perspective away from the usual metro noise.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="font-bold text-dark font-display text-base">03</span>
-                  <span><strong>Mythology Over Marketing:</strong> People do not fall in love with value propositions; they surrender to meaningful myths.</span>
+                  <span><strong>Systems Enable Creativity:</strong> Pure inspiration is fleeting. Repeatable editorial workflows make creative work sustainable.</span>
                 </div>
               </div>
             </div>
@@ -82,30 +82,30 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-8 text-sm sm:text-base text-dark/80 leading-relaxed">
             <div>
               <h2 className="font-display text-3xl tracking-display uppercase text-dark mb-4">
-                The Origins in Marwar
+                The Journey So Far
               </h2>
               <p>
-                Raised against the carved red sandstone walls of the Blue City, Himanshu Dadhich grew up inside a sensory cosmos where architectural permanence and oral literature were not museum artifacts, but everyday realities.
+                I am a content creator, filmmaker, and storyteller hailing from Jodhpur, Rajasthan. Over the last 7 years, I’ve worked across different layers of the creative industry — from scripting and directing brand films to building content systems and sharing independent documentaries.
               </p>
               <p className="mt-4">
-                Watching classical vocalists at Mehrangarh, listening to master stonemasons chisel intricate jaalis without blueprints, and observing the social choreography of public stepwells instilled a lifelong fascination: <em>Why do certain human creations defy centuries of entropy while others vanish without a trace?</em>
+                I didn’t take the traditional path of moving to an agency hub. Staying in Jodhpur allowed me to develop an independent creative rhythm, focusing on deliberate storytelling, patient visuals, and projects with genuine human resonance.
               </p>
             </div>
 
             <PullQuote
-              quote="We live in an age that confuses velocity with consequence. My work exists to restore consequence."
+              quote="Storytelling isn't about shouting louder. It's about having something real to say and knowing how to structure it."
               author="Himanshu Dadhich"
             />
 
             <div>
               <h2 className="font-display text-3xl tracking-display uppercase text-dark mb-4">
-                Building TLR (The Local Roots)
+                TLR & The Creative Lab
               </h2>
               <p>
-                Rather than relocating to Mumbai, London, or New York to conform to conventional agency tropes, Himanshu founded <strong>TLR (The Local Roots)</strong> directly from Jodhpur.
+                Under the umbrella of <strong>TLR (The Local Roots)</strong>, I collaborate with founders, brands, and companies to craft distinct brand identities, films, and video content that stands out in the crowded Indian digital landscape.
               </p>
               <p className="mt-4">
-                Operating as an elite creative strategy bureau and film production house, TLR serves an international clientele spanning luxury heritage hospitality, tech visionaries, craft distillers, and cultural foundations. By combining the intellectual rigour of top-tier narrative strategy with the textured tactility of independent cinema, the studio delivers work that commands undeniable emotional weight.
+                Through <strong>The Creative Lab</strong>, I teach early-stage creators and filmmakers the exact systems, production workflows, and business models I have refined over 7 years — helping them build sustainable creative practices without the burnout.
               </p>
 
               {/* Real Annotated Studio Visual */}
@@ -120,26 +120,26 @@ export default function AboutPage() {
 
             <div>
               <h2 className="font-display text-3xl tracking-display uppercase text-dark mb-4">
-                The Independent Canon
+                Independent Projects
               </h2>
               <p>
-                Alongside client advisory, Himanshu dedicates substantial studio resources to self-directed intellectual properties and cultural archives. These include the multi-year cinematic undertaking <em>Sundarkand: The Inner Odyssey</em>, episodic inquiry series such as <em>How We Learn</em>, and an ongoing open-source field notebook documenting vernacular crafts across Western India.
+                Beyond client work, I dedicate time to self-directed passion projects like <em>Sundarkand: The Inner Odyssey</em> — an exploration of timeless Indian scripture and cultural narrative told through a modern cinematic lens.
               </p>
             </div>
 
             <div className="pt-6 border-t border-dark/15 flex flex-wrap gap-4">
               <Link
-                href="/collaborate"
-                className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2"
+                href="/conversation"
+                className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2 group"
               >
-                <span>Initiate Dialogue</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <span>Book a Call</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 href="/work"
                 className="px-6 py-3.5 border border-dark/30 hover:border-dark text-dark hover:bg-cream-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px]"
               >
-                Inspect Portfolio
+                View Portfolio
               </Link>
             </div>
           </div>

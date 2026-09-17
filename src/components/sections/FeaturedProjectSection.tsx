@@ -1,123 +1,58 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Heart, Sparkles, Music, Film, Compass } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 export default function FeaturedProjectSection() {
   const sundarkand = projects[0];
 
   return (
-    <section id="sundarkand" className="py-20 md:py-28 border-b border-dark/15 relative overflow-hidden bg-cream-dark/30">
+    <section className="py-20 md:py-28 border-b border-dark/15 bg-paper">
       <div className="max-w-site mx-auto px-6 lg:px-12">
-        {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-dark/15 pb-6 mb-12">
-          <div className="flex items-center gap-3">
-            <span className="w-8 h-[2px] bg-sandstone" />
-            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-sandstone">
-              09 / ORIGINAL PROJECT &middot; SACRED UNDERTAKING
-            </span>
-          </div>
-
-          <span className="text-xs uppercase font-mono tracking-wider text-muted hidden sm:inline">
-            PATRON-FUNDED &middot; INDEPENDENT CULTURE
-          </span>
+        <div className="max-w-2xl mb-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-display uppercase text-dark leading-tight">
+            Current Project.
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Visual Left */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] rounded-[2px] overflow-hidden border border-dark/20 shadow-md">
+        {/* Single compact card */}
+        <Link
+          href="/projects/sundarkand"
+          className="block bg-cream border border-dark/15 rounded-[2px] overflow-hidden hover:border-dark/30 transition-all group"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-12">
+            <div className="md:col-span-5 relative aspect-video md:aspect-auto md:min-h-[280px] overflow-hidden">
               <img
                 src={sundarkand.thumbnail}
                 alt={sundarkand.title}
-                className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/85 via-transparent to-transparent" />
-
-              <div className="absolute bottom-6 left-6 right-6 text-cream">
-                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-sandstone block mb-1">
-                  Cultural Legacy Project
-                </span>
-                <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-display text-cream">
-                  {sundarkand.title}
-                </h3>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-dark/30 hidden md:block" />
+              <div className="absolute top-4 left-4 px-3 py-1 bg-dark/80 text-cream text-[10px] font-mono uppercase tracking-wider rounded-[2px]">
+                Work in Progress &middot; {sundarkand.currentProgress}%
               </div>
             </div>
 
-            {/* Floating Progress Badge */}
-            <div className="absolute -bottom-6 -right-4 sm:right-6 bg-dark text-cream p-5 rounded-[2px] border border-sandstone/40 shadow-xl max-w-xs">
-              <div className="flex items-center justify-between gap-4 mb-2">
-                <span className="text-[10px] uppercase tracking-wider text-sandstone font-semibold">
-                  Progress Milestone
-                </span>
-                <span className="text-xs font-bold text-cream font-mono">
-                  {sundarkand.currentProgress}% Complete
-                </span>
-              </div>
-              <div className="w-full bg-cream/10 h-1.5 rounded-full overflow-hidden">
-                <div
-                  className="bg-sandstone h-full transition-all duration-1000"
-                  style={{ width: `${sundarkand.currentProgress}%` }}
-                />
-              </div>
-              <p className="text-[10px] text-cream/70 mt-2 font-serif italic">
-                Acoustic scoring recorded. AI visual generation & master grading in progress.
+            <div className="md:col-span-7 p-8 flex flex-col justify-center">
+              <span className="text-xs font-mono text-sandstone uppercase tracking-wider mb-2">
+                AI Devotional Film &middot; TLR Original
+              </span>
+
+              <h3 className="font-display text-3xl sm:text-4xl uppercase tracking-display text-dark mb-3">
+                Sundarkand
+              </h3>
+
+              <p className="text-sm text-dark/70 leading-relaxed max-w-lg mb-6">
+                A cinematic retelling of the Sundarkand through AI-generated visuals and acoustic Indian classical scoring. An independent cultural project, not a client brief.
               </p>
+
+              <span className="inline-flex items-center gap-2 text-xs uppercase font-semibold tracking-label text-dark group-hover:text-sandstone transition-colors">
+                <span>Learn More</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
             </div>
           </div>
-
-          {/* Narrative Right */}
-          <div className="lg:col-span-6 space-y-6">
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-display uppercase text-dark leading-[0.95]">
-              Sundarkand:<br />
-              <span className="text-sandstone">The Inner Odyssey</span>
-            </h2>
-
-            <p className="font-serif italic text-lg sm:text-xl text-dark/85 leading-snug">
-              “A 2.5-hour cinematic visual-musical opus interpreting the sacred poetry of Goswami Tulsidas through contemporary AI film pipelines and acoustic Indian orchestration.”
-            </p>
-
-            <p className="text-xs sm:text-sm text-dark/75 leading-relaxed font-sans">
-              This is not a commercial client project. It is our studio’s self-initiated cultural dedication—preserving ancient philosophical poetry while pioneering ethical artificial intelligence cinema. Backed transparently by a global patron circle.
-            </p>
-
-            {/* 3 Process Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
-              <div className="p-3 bg-cream border border-dark/10 rounded-[2px]">
-                <span className="font-bold text-dark uppercase text-[10px] tracking-wider block mb-1 flex items-center gap-1.5">
-                  <Music className="w-3.5 h-3.5 text-sandstone" />
-                  Acoustic Scoring
-                </span>
-                <span className="text-dark/70">100+ verses scored with classical sarangi, flute, and mridangam.</span>
-              </div>
-
-              <div className="p-3 bg-cream border border-dark/10 rounded-[2px]">
-                <span className="font-bold text-dark uppercase text-[10px] tracking-wider block mb-1 flex items-center gap-1.5">
-                  <Film className="w-3.5 h-3.5 text-sandstone" />
-                  Synthetic Cinema
-                </span>
-                <span className="text-dark/70">Custom latent diffusion pipelines maintaining strict mythological fidelity.</span>
-              </div>
-            </div>
-
-            <div className="pt-4 flex flex-wrap items-center gap-4">
-              <Link
-                href="/projects/sundarkand"
-                className="px-6 py-3.5 bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2"
-              >
-                <span>Explore Project & Progress</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/supporters"
-                className="px-6 py-3.5 border border-dark/30 hover:border-dark text-dark hover:bg-cream transition-all duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] flex items-center gap-2"
-              >
-                <Heart className="w-3.5 h-3.5 text-rust fill-rust/20" />
-                <span>Join Patron Circle</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+        </Link>
       </div>
     </section>
   );
