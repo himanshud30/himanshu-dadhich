@@ -4,11 +4,10 @@ import ProofRail from '@/components/sections/ProofRail';
 import SelectedWorkSection from '@/components/sections/SelectedWorkSection';
 import MethodSection from '@/components/sections/MethodSection';
 import SignatureEngagementsSection from '@/components/sections/SignatureEngagementsSection';
+import { CreativeLabSection } from '@/components/sections/CreativeLabSection';
 import WorkingProcessSection from '@/components/sections/WorkingProcessSection';
-import OriginalThinkingSection from '@/components/sections/OriginalThinkingSection';
 import StudioSection from '@/components/sections/StudioSection';
 import FeaturedProjectSection from '@/components/sections/FeaturedProjectSection';
-import FieldNotesPreviewSection from '@/components/sections/FieldNotesPreviewSection';
 import ClientWinsSection from '@/components/sections/ClientWinsSection';
 import NewsletterSection from '@/components/sections/NewsletterSection';
 import FAQSection from '@/components/sections/FAQSection';
@@ -17,46 +16,43 @@ import ConversationCTASection from '@/components/sections/ConversationCTASection
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* 01 — Hero: Simple positioning & two actions */}
+      {/* 01 — Hero: Himanshu Dadhich & TLR Studio positioning */}
       <HeroSection />
 
-      {/* 02 — Proof Rail: Compact proof bar (7+ years, 60K+ views on TOOLS, etc.) + client marks */}
+      {/* 02 — Proof Rail: Verification metrics & partner marks */}
       <ProofRail />
 
-      {/* 03 — Selected Work: Three excellent case studies with outcomes & visual evidence */}
+      {/* 03 — Selected Work: Portfolio showcase with Talking Head, Motion Design, Long Form & Case Studies */}
       <SelectedWorkSection />
 
       {/* 04 — The Method: Find the story → Build the system → Make it travel */}
       <MethodSection />
 
-      {/* 05 — Signature Engagements: 5 structured packages with duration & outcome */}
+      {/* 05 — Signature Engagements: Services with Book a Call CTAs */}
       <SignatureEngagementsSection />
 
-      {/* 06 — How Working With Me Works: 6-step visible roadmap removing uncertainty */}
+      {/* 06 — The Creative Lab: Content OS Incubation & Cohort Experience */}
+      <CreativeLabSection />
+
+      {/* 07 — Working Process: 6-step roadmap */}
       <WorkingProcessSection />
 
-      {/* 07 — Original Thinking: 4 pillars + TOOLS reel proof card */}
-      <OriginalThinkingSection />
-
-      {/* 08 — Studio: TLR as the structure through which client work is delivered */}
+      {/* 08 — Studio: TLR Delivery Apparatus */}
       <StudioSection />
 
-      {/* 09 — Original Project: Sundarkand with progress, process & support pathway */}
+      {/* 09 — Sundarkand: Devotional Cinema & Living Archive */}
       <FeaturedProjectSection />
 
-      {/* 10 — From the Field: Jodhpur and travel observations */}
-      <FieldNotesPreviewSection />
-
-      {/* 11 — Results & Client Voices: 5 editorial win stories + testimonials */}
+      {/* 10 — Results & Client Voices */}
       <ClientWinsSection />
 
-      {/* 12 — Newsletter: One strong promise and latest issue */}
+      {/* 11 — Newsletter & Dispatches: Combined Blog, Field Notes & Strategy Essays */}
       <NewsletterSection />
 
-      {/* 13 — FAQ: 12 questions removing commercial uncertainty */}
+      {/* 12 — FAQ */}
       <FAQSection />
 
-      {/* 14 — Conversation: Human photo, clear expectation & 6 conversation paths */}
+      {/* 13 — Conversation CTA */}
       <ConversationCTASection />
     </div>
   );

@@ -2,32 +2,28 @@ import { NavLink } from '@/types';
 
 export const mainNavLinks: NavLink[] = [
   { label: 'Work', href: '/work' },
-  { label: 'Series', href: '/series' },
   { label: 'Services', href: '/services' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Ideas', href: '/ideas' },
-  { label: 'Field Notes', href: '/field-notes' },
+  { label: 'Creative Lab', href: '/#creative-lab' },
+  { label: 'Sundarkand', href: '/projects/sundarkand' },
+  { label: 'Newsletter & Notes', href: '/newsletter' },
   { label: 'About', href: '/about' },
 ];
 
 export const persistentActions: NavLink[] = [
-  { label: 'Subscribe', href: '/newsletter' },
-  { label: 'Start a Conversation', href: '/conversation' },
+  { label: 'Book a Call', href: '/conversation' },
 ];
 
 export const footerLinks = {
   explore: [
     { label: 'Work', href: '/work' },
-    { label: 'Series', href: '/series' },
     { label: 'Services', href: '/services' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Ideas', href: '/ideas' },
-    { label: 'Field Notes', href: '/field-notes' },
+    { label: 'Creative Lab', href: '/#creative-lab' },
+    { label: 'Sundarkand', href: '/projects/sundarkand' },
+    { label: 'Newsletter & Notes', href: '/newsletter' },
   ],
   connect: [
-    { label: 'About', href: '/about' },
-    { label: 'Newsletter', href: '/newsletter' },
-    { label: 'Conversation', href: '/conversation' },
+    { label: 'About Himanshu', href: '/about' },
+    { label: 'Book a Call', href: '/conversation' },
     { label: 'Collaborations', href: '/collaborations' },
     { label: 'Supporters', href: '/supporters' },
   ],
@@ -38,3 +34,4 @@ export const footerLinks = {
     { label: 'Twitter / X', href: 'https://x.com/himanshudadhich', external: true },
   ],
 };
+

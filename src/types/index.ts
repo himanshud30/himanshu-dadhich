@@ -20,6 +20,7 @@ export interface CaseStudy {
   lessons: string[];
   relatedSlugs: string[];
   featured: boolean;
+  videoUrl?: string;
 }
 
 export type CaseStudyCategory =
@@ -30,7 +31,10 @@ export type CaseStudyCategory =
   | 'Brand Storytelling'
   | 'Social Content'
   | 'AI Experiments'
-  | 'Original Projects';
+  | 'Original Projects'
+  | 'Talking Head'
+  | 'Motion Design'
+  | 'Long Form';
 
 export interface Series {
   slug: string;

@@ -22,7 +22,7 @@ export const services: Service[] = [
     ],
     timeline: '1–2 weeks',
     expectedOutcome: 'A concise, rigorous diagnosis and direction document that eliminates ambiguity across leadership.',
-    startingPrice: '₹1,50,000 / $2,000 USD',
+    startingPrice: 'Book a Call',
     icon: 'compass'
   },
   {
@@ -48,7 +48,7 @@ export const services: Service[] = [
     ],
     timeline: '4–6 weeks',
     expectedOutcome: 'A complete, usable brand-story system that turns scattered communication into consistent, compounding trust.',
-    startingPrice: '₹3,50,000 / $4,500 USD',
+    startingPrice: 'Book a Call',
     icon: 'layers'
   },
   {
@@ -74,7 +74,7 @@ export const services: Service[] = [
     ],
     timeline: '6–8 weeks',
     expectedOutcome: 'A repeatable, high-leverage content operation that cuts production chaos in half while doubling narrative retention.',
-    startingPrice: '₹4,50,000 / $5,500 USD',
+    startingPrice: 'Book a Call',
     icon: 'sparkles'
   },
   {
@@ -98,7 +98,7 @@ export const services: Service[] = [
     ],
     timeline: '3 months minimum',
     expectedOutcome: 'Consistent senior creative leadership that ensures every piece of output elevates long-term enterprise prestige.',
-    startingPrice: '₹2,50,000 / month ($3,000 / mo)',
+    startingPrice: 'Book a Call',
     icon: 'compass'
   },
   {
@@ -124,7 +124,7 @@ export const services: Service[] = [
     ],
     timeline: 'Custom (typically 8–16 weeks)',
     expectedOutcome: 'An enduring original branded property that builds generational audience goodwill and media resonance.',
-    startingPrice: 'Custom Quote / Partnership Basis',
+    startingPrice: 'Book a Call',
     icon: 'film'
   }
 ];

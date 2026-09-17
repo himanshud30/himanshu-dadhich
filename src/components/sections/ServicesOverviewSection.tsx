@@ -140,7 +140,7 @@ export default function ServicesOverviewSection() {
                         isActive ? 'text-cream/50' : 'text-muted'
                       }`}
                     >
-                      Investment &middot; {service.timeline}
+                      Consultation &middot; {service.timeline}
                     </span>
                     <span
                       className={`text-xs font-semibold tracking-wide ${
@@ -152,14 +152,14 @@ export default function ServicesOverviewSection() {
                   </div>
 
                   <Link
-                    href={`/collaborate?service=${encodeURIComponent(service.title)}`}
+                    href="/conversation"
                     className={`inline-flex items-center gap-2 text-xs uppercase font-semibold tracking-label rounded-full pl-3.5 pr-1.5 py-1.5 transition-all group ${
                       isActive
                         ? 'bg-sandstone text-dark hover:bg-cream'
                         : 'bg-dark text-cream hover:bg-sandstone hover:text-dark'
                     }`}
                   >
-                    <span className="text-[10px]">Engage</span>
+                    <span className="text-[10px]">Book a Call</span>
                     <span className="w-6 h-6 rounded-full bg-dark/20 text-current flex items-center justify-center transition-transform group-hover:rotate-45">
                       <ArrowUpRight className="w-3 h-3" />
                     </span>

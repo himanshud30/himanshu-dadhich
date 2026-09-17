@@ -96,20 +96,20 @@ export default function SignatureEngagementsSection() {
                 <div className="pt-6 mt-6 border-t border-dark/10 flex items-center justify-between">
                   <div>
                     <span className="text-[9px] font-mono uppercase tracking-wider text-muted block">
-                      Investment Logic
+                      Consultation
                     </span>
                     <span className="font-mono text-xs font-semibold text-dark">
-                      {service.startingPrice}
+                      Book a Call
                     </span>
                   </div>
 
-                  <a
-                    href="#conversation"
-                    className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-dark hover:text-sandstone transition-colors group"
+                  <Link
+                    href="/conversation"
+                    className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-dark text-cream hover:bg-sandstone hover:text-dark transition-all duration-300 group"
                   >
-                    <span>Inquire</span>
+                    <span>Book a Call</span>
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             );

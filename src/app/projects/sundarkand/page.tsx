@@ -1,259 +1,189 @@
-import React from 'react';
-import type { Metadata } from 'next';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, Heart, Shield, Sparkles } from 'lucide-react';
+import { ArrowLeft, Play, Sparkles, Shield, Heart, Volume2, Film } from 'lucide-react';
 import { projects } from '@/data/projects';
 import PullQuote from '@/components/common/PullQuote';
-
-export const metadata: Metadata = {
-  title: 'Sundarkand: The Inner Odyssey — Film & Archive',
-  description: 'An independent cinematic undertaking interpreting the sacred poetic text of the Sundarkand through visual poetry and raw Rajasthani soil.',
-};
+import { VideoPlayerModal } from '@/components/common/VideoPlayerModal';
 
 export default function SundarkandPage() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const sundarkand = projects[0];
 
+  const chapters = [
+    { num: '01', title: 'The Call', verses: '1–20', desc: 'Jambavan reminds Hanuman of his divine powers. The moment of self-awakening.' },
+    { num: '02', title: 'The Leap', verses: '21–40', desc: 'Hanuman takes the mighty leap across the ocean. Surasa and Simhika intervene.' },
+    { num: '03', title: 'Arrival in Lanka', verses: '41–55', desc: 'Hanuman enters Lanka golden gates at night. Encounters Lankini.' },
+    { num: '04', title: 'The Search', verses: '56–80', desc: 'Searching through Lanka palaces and gardens for Sita.' },
+    { num: '05', title: 'Ashok Vatika', verses: '81–115', desc: 'Hanuman finds Sita in Ashok Vatika, surrounded by Rakshasis.' },
+    { num: '06', title: 'Lanka Dahan', verses: '261–285', desc: 'Hanuman tail is set ablaze. He burns Lanka to the ground.' },
+  ];
+
   return (
-    <div className="py-12 md:py-20">
-      <div className="max-w-site mx-auto px-6 lg:px-12">
+    <div className="bg-neutral-950 text-neutral-100 min-h-screen py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Back Link */}
         <div className="mb-8">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-xs uppercase font-semibold tracking-label text-muted hover:text-dark transition-colors"
+            className="inline-flex items-center gap-2 text-xs uppercase font-mono tracking-widest text-amber-400/80 hover:text-amber-400 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Return to Projects</span>
           </Link>
         </div>
 
-        {/* Hero Header */}
-        <div className="border-b border-dark/15 pb-12 mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-[2px] bg-sandstone" />
-            <span className="text-xs uppercase font-semibold tracking-[0.2em] text-sandstone">
-              Independent Cultural Epic & Visual Album
-            </span>
+        {/* Video Hero Banner */}
+        <div className="relative rounded-3xl overflow-hidden border border-amber-400/20 bg-neutral-900 shadow-2xl mb-16">
+          {/* Background Video */}
+          <div className="relative aspect-video w-full overflow-hidden flex items-center justify-center">
+            <video
+              src="/sample.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-35"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+
+            {/* Play Button Overlay */}
+            <div className="relative z-10 text-center p-8">
+              <span className="text-4xl mb-4 block text-amber-400/60 font-serif">ॐ</span>
+              <span className="text-xs font-mono tracking-[0.3em] uppercase text-amber-400 block mb-3">
+                A TLR INTERNAL DEVOTIONAL CINEMA FILM
+              </span>
+              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-neutral-100 mb-4 tracking-tight">
+                Sundarkand
+              </h1>
+              <p className="font-serif italic text-lg sm:text-2xl text-amber-300 max-w-2xl mx-auto mb-8">
+                An AI Devotional Film & Living Manuscript
+              </p>
+
+              <button
+                onClick={() => setIsVideoOpen(true)}
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-amber-400 text-neutral-950 font-medium text-sm hover:bg-amber-300 transition-all transform hover:scale-105 shadow-xl cursor-pointer"
+              >
+                <Play className="w-5 h-5 fill-current" />
+                <span>Watch Devotional Trailer (4K)</span>
+              </button>
+            </div>
           </div>
 
-          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl tracking-display uppercase text-dark leading-tight2">
-            Sundarkand:<br />
-            <span className="text-sandstone">The Inner Odyssey</span>
-          </h1>
-
-          <p className="font-serif italic text-2xl sm:text-3xl text-dark/80 mt-4 max-w-4xl leading-snug">
-            “{sundarkand.tagline}”
-          </p>
-
-          {/* Progress Tracker Bar */}
-          <div className="mt-8 p-6 bg-cream-dark/50 border border-dark/15 rounded-[2px] max-w-2xl">
-            <div className="flex items-center justify-between gap-4 mb-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-dark">
-                Production Progress Tracker
-              </span>
-              <span className="text-xs font-bold text-sandstone">
-                {sundarkand.currentProgress}% Ready for Release
-              </span>
-            </div>
-            <div className="w-full bg-dark/10 h-2 rounded-full overflow-hidden">
-              <div
-                className="bg-sandstone h-full"
-                style={{ width: `${sundarkand.currentProgress}%` }}
-              />
-            </div>
-            <p className="text-[11px] text-muted mt-2">
-              Principal photography & musical compositions wrapped. Final master sound grading underway.
-            </p>
-          </div>
-        </div>
-
-        {/* Hero Stills Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {sundarkand.gallery.map((item, idx) => (
-            <figure key={idx} className="space-y-2">
-              <div className="aspect-[4/3] rounded-[2px] overflow-hidden border border-dark/20 shadow-sm">
-                <img
-                  src={item.url}
-                  alt={item.alt}
-                  className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
-                />
-              </div>
-              <figcaption className="text-xs text-muted font-serif italic">
-                {item.caption}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        {/* Vision & Narrative */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-8 space-y-12 text-sm sm:text-base text-dark/85 leading-relaxed">
+          {/* Quick Metrics Bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-neutral-950/90 border-t border-amber-400/10 text-center font-mono">
             <div>
-              <h2 className="font-display text-3xl sm:text-4xl tracking-display uppercase text-dark mb-4">
+              <span className="text-2xl font-bold text-amber-400">350</span>
+              <span className="text-[10px] uppercase text-neutral-400 block mt-0.5">Sacred Verses</span>
+            </div>
+            <div>
+              <span className="text-2xl font-bold text-amber-400">18</span>
+              <span className="text-[10px] uppercase text-neutral-400 block mt-0.5">Chapters</span>
+            </div>
+            <div>
+              <span className="text-2xl font-bold text-amber-400">30</span>
+              <span className="text-[10px] uppercase text-neutral-400 block mt-0.5">Characters</span>
+            </div>
+            <div>
+              <span className="text-2xl font-bold text-amber-400">26</span>
+              <span className="text-[10px] uppercase text-neutral-400 block mt-0.5">Environments</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote Block */}
+        <div className="max-w-4xl mx-auto text-center my-16 border-y border-amber-400/20 py-12">
+          <blockquote className="font-serif text-2xl sm:text-3xl italic text-neutral-200 leading-relaxed">
+            “This is more than a film. It is a digital devotional archive — a living manuscript of Sundarkand in cinematic form.”
+          </blockquote>
+          <p className="mt-4 text-xs font-mono text-amber-400/70 tracking-widest uppercase">
+            Built with reverence. Generated with intention.
+          </p>
+        </div>
+
+        {/* Verses Preview Section */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-400 border border-amber-400/30 px-3 py-1 rounded bg-amber-400/5">
+              अध्याय
+            </span>
+            <h2 className="font-serif text-3xl font-bold text-neutral-100">
+              The Verses & Chapters
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {chapters.map((c) => (
+              <div key={c.num} className="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/30 transition-all">
+                <div className="flex items-center justify-between mb-3 font-mono text-xs text-amber-400">
+                  <span>CHAPTER {c.num}</span>
+                  <span className="text-neutral-500">VERSES {c.verses}</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold text-neutral-100 mb-2">{c.title}</h3>
+                <p className="text-xs text-neutral-400 leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Production Overview Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 space-y-12 text-neutral-300 text-sm sm:text-base leading-relaxed">
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-neutral-100 mb-4">
                 The Foundational Vision
               </h2>
               <p>{sundarkand.vision}</p>
             </div>
 
-            <PullQuote
-              quote="When Hanuman stands at the edge of the boundless ocean, he is not a mythological superhero; he is every human being paralyzed before the impossible."
-              author="Himanshu Dadhich"
-              role="Director"
-            />
-
-            <div>
-              <h2 className="font-display text-3xl sm:text-4xl tracking-display uppercase text-dark mb-4">
-                Cultural Intention & Form
-              </h2>
-              <p>{sundarkand.culturalIntention}</p>
-              <p className="mt-4">{sundarkand.structure}</p>
-            </div>
-
-            {/* Characters & Archetypes */}
-            <div className="p-8 bg-cream-dark/40 border border-dark/15 rounded-[2px]">
-              <h3 className="font-display text-2xl tracking-display uppercase text-dark mb-4">
-                Archetypes in the Visual Album
+            <div className="p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+              <h3 className="font-serif text-2xl font-bold text-neutral-100 mb-4">
+                Character & Prompt Architecture
               </h3>
-              <ul className="space-y-2.5 text-xs sm:text-sm">
+              <ul className="space-y-3">
                 {sundarkand.characters.map((char, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-dark/80">
-                    <Sparkles className="w-4 h-4 text-sandstone shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-neutral-300">
+                    <Sparkles className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                     <span>{char}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
-            {/* Production Timeline Milestones */}
-            <div>
-              <h2 className="font-display text-3xl sm:text-4xl tracking-display uppercase text-dark mb-6">
-                Chronological Production Timeline
-              </h2>
-              <div className="space-y-6 border-l-2 border-sandstone/50 pl-6 ml-2">
-                {sundarkand.timeline.map((item, idx) => (
-                  <div key={idx} className="relative">
-                    <span
-                      className={`absolute -left-[31px] top-1 w-4 h-4 rounded-full border-2 ${
-                        item.completed
-                          ? 'bg-sandstone border-sandstone'
-                          : 'bg-cream border-sandstone'
-                      }`}
-                    />
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs uppercase tracking-wider font-semibold text-sandstone">
-                        {item.date}
-                      </span>
-                      {item.completed && (
-                        <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-[2px]">
-                          Completed
-                        </span>
-                      )}
-                    </div>
-                    <h4 className="font-bold text-base text-dark mt-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-dark/75 mt-1">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Budget Transparency */}
-            <div className="p-8 bg-dark text-cream rounded-[2px] border border-cream/15 space-y-4">
-              <div className="flex items-center gap-2 text-sandstone text-xs uppercase font-semibold tracking-wider">
-                <Shield className="w-4 h-4" />
-                <span>Radical Fiscal Transparency</span>
-              </div>
-              <h3 className="font-display text-2xl uppercase tracking-display">
-                Open Book Budgeting
-              </h3>
-              <p className="text-xs sm:text-sm text-cream/80 leading-relaxed">
-                {sundarkand.budgetTransparency}
-              </p>
-            </div>
-
-            {/* Production Updates */}
-            <div>
-              <h2 className="font-display text-3xl sm:text-4xl tracking-display uppercase text-dark mb-6">
-                Field Journal Updates
-              </h2>
-              <div className="space-y-4">
-                {sundarkand.updates.map((update, idx) => (
-                  <div key={idx} className="p-6 bg-cream border border-dark/15 rounded-[2px] shadow-sm">
-                    <span className="text-[10px] uppercase font-semibold tracking-wider text-sandstone block mb-1">
-                      {update.date}
-                    </span>
-                    <h4 className="font-bold text-sm sm:text-base text-dark mb-2">
-                      {update.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-dark/75 leading-relaxed">
-                      {update.content}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Sidebar: Patron CTA and Team */}
+          {/* Sidebar */}
           <div className="lg:col-span-4 space-y-8">
-            {/* Patron Call Box */}
-            <div className="p-8 bg-dark text-cream rounded-[2px] border border-sandstone/60 space-y-6">
-              <div className="flex items-center gap-2 text-rust">
-                <Heart className="w-5 h-5 fill-rust" />
-                <span className="text-xs uppercase font-bold tracking-wider text-cream">
-                  Join The Patron Circle
-                </span>
+            <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-900 to-amber-950/30 border border-amber-400/30 space-y-6">
+              <div className="flex items-center gap-2 text-amber-400">
+                <Heart className="w-5 h-5 fill-current" />
+                <span className="text-xs font-mono uppercase tracking-widest">Patron Circle</span>
               </div>
-
-              <h3 className="font-display text-3xl uppercase tracking-display leading-tight2">
-                Help Us Complete The Final Grade
+              <h3 className="font-serif text-2xl font-bold text-neutral-100">
+                Support the Final AI Cinema Master
               </h3>
-
-              <p className="text-xs text-cream/75 leading-relaxed">
-                By becoming an independent patron, you directly protect the creative sanctity of this cultural work. Receive private screenings, fine art prints, and project credits.
+              <p className="text-xs text-neutral-400 leading-relaxed">
+                By joining as an independent patron, you directly support acoustic Indian classical scoring and visual rendering.
               </p>
-
               <Link
                 href="/supporters"
-                className="w-full text-center px-6 py-4 bg-sandstone text-dark hover:bg-cream transition-colors duration-300 text-xs font-semibold uppercase tracking-label rounded-[2px] block"
+                className="w-full text-center px-6 py-3.5 rounded-xl bg-amber-400 text-neutral-950 font-medium text-xs uppercase tracking-wider block hover:bg-amber-300 transition-colors"
               >
-                Explore Patron Tiers & Back
+                Join Patron Circle
               </Link>
-            </div>
-
-            {/* Creative Leadership */}
-            <div className="p-6 bg-cream-dark/50 border border-dark/15 rounded-[2px] space-y-4">
-              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-sandstone block">
-                Production Leadership
-              </span>
-              <ul className="space-y-4">
-                {sundarkand.team.map((member, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    {member.image ? (
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-10 h-10 rounded-full object-cover grayscale"
-                      />
-                    ) : (
-                      <div className="w-10 h-10 rounded-full bg-dark text-cream flex items-center justify-center font-display text-sm">
-                        {member.name.charAt(0)}
-                      </div>
-                    )}
-                    <div>
-                      <div className="text-xs font-bold text-dark">{member.name}</div>
-                      <div className="text-[11px] text-muted">{member.role}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Video Lightbox Modal */}
+      <VideoPlayerModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoUrl="/sample.mp4"
+        title="Sundarkand: The Inner Odyssey (AI Devotional Teaser)"
+        category="TLR DEVOTIONAL CINEMA"
+      />
     </div>
   );
 }
